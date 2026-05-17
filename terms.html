@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>나의 할 일 서비스 이용약관</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #6C5CE7;
+      --text:    #1a1a2e;
+      --muted:   #555;
+      --bg:      #f8f8fc;
+      --card:    #ffffff;
+      --border:  #e2e2f0;
+      --accent:  #6C5CE7;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR',
+                   sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      padding: 0 16px 60px;
+    }
+
+    /* ── 헤더 ── */
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 36px 24px 28px;
+      margin: 0 -16px 32px;
+      text-align: center;
+    }
+    header .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      background: rgba(255,255,255,.2);
+      border-radius: 20px;
+      padding: 3px 12px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    header h1 {
+      font-size: clamp(1.4rem, 5vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+    header p {
+      margin-top: 8px;
+      font-size: 13px;
+      opacity: .85;
+    }
+
+    /* ── 컨테이너 ── */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* ── 섹션 카드 ── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 28px 24px;
+      margin-bottom: 20px;
+    }
+
+    /* ── 조 제목 ── */
+    .card h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+    }
+    .card h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    /* ── 본문 ── */
+    p { font-size: 14.5px; color: var(--muted); margin-bottom: 10px; }
+    p:last-child { margin-bottom: 0; }
+
+    ol { padding-left: 20px; }
+    ol li {
+      font-size: 14.5px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    ol li:last-child { margin-bottom: 0; }
+
+    /* ── 불릿 목록 ── */
+    .rules { list-style: none; margin-top: 12px; }
+    .rules li {
+      position: relative;
+      padding: 12px 14px 12px 18px;
+      margin-bottom: 8px;
+      background: var(--bg);
+      border-left: 3px solid var(--primary);
+      border-radius: 0 10px 10px 0;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .rules li:last-child { margin-bottom: 0; }
+    .rules li strong {
+      color: var(--text);
+      display: block;
+      margin-bottom: 3px;
+      font-weight: 700;
+    }
+
+    /* ── 경고 블록 ── */
+    .notice {
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 13.5px;
+      color: #7a5c00;
+      margin-top: 14px;
+    }
+    .notice strong { color: #5c4200; }
+
+    /* ── 강조 텍스트 ── */
+    em-bold, b { font-weight: 700; color: var(--text); font-style: normal; }
+
+    /* ── 푸터 ── */
+    .meta-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 28px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 32px;
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+    .meta-card span strong { color: var(--text); }
+
+    footer {
+      text-align: center;
+      font-size: 12.5px;
+      color: #aaa;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 480px) {
+      .card { padding: 20px 18px 18px; }
+      header { padding: 28px 16px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="badge">Terms of Service</div>
+  <h1>나의 할 일 서비스 이용약관</h1>
+  <p>TeraBlack · 모바일 애플리케이션 '나의 할 일'</p>
+</header>
+
+<div class="container">
+
+  <!-- 제1조 -->
+  <div class="card">
+    <h2><span class="num">1</span>제1조 (목적)</h2>
+    <p>
+      본 약관은 TeraBlack(이하 "회사" 또는 "운영자")이 제공하는 모바일 애플리케이션
+      '나의 할 일'(이하 "앱" 또는 "서비스")의 이용과 관련하여, 회사와 회원(이하 "이용자")
+      간의 권리, 의무 및 책임사항, 서비스 이용수칙을 규정함을 목적으로 합니다.
+    </p>
+  </div>
+
+  <!-- 제2조 -->
+  <div class="card">
+    <h2><span class="num">2</span>제2조 (이용계약의 성립 및 회원가입)</h2>
+    <ol>
+      <li>
+        이용계약은 이용자가 본 약관의 내용에 동의하고, 회사가 정한 가입 양식에 따라
+        회원정보를 입력하여 가입을 신청한 후, 회사가 이를 승인함으로써 성립합니다.
+      </li>
+      <li>
+        회사는 서비스 제공을 위해 이용자의
+        <b>구글 이메일, 닉네임, 전화번호, 생년월일(나이)</b> 등의 정보를 수집할 수 있으며,
+        이는 개인정보처리방침에 따라 안전하게 보호됩니다.
+      </li>
+    </ol>
+  </div>
+
+  <!-- 제3조 -->
+  <div class="card">
+    <h2><span class="num">3</span>제3조 (서비스의 제공 및 변경)</h2>
+    <ol>
+      <li>
+        본 앱은 나의 할 일, 날짜형/그래프형 목록, 기분 한 줄 기록, 가계부, 타이머,
+        세계시각 등의 서비스를 제공합니다.
+      </li>
+      <li>
+        회사는 더 나은 서비스 제공을 위해 앱의 기능, 디자인 등을 수시로 변경하거나
+        업데이트할 수 있습니다.
+      </li>
+      <li>
+        <b>클라우드 백업 및 복원 기능은 현재 베타(Beta) 단계</b>로 제공되며, 회사는
+        성능 개선 및 안정화를 위해 해당 기능을 예고 없이 수정, 중단 또는 변경할 수 있습니다.
+      </li>
+    </ol>
+  </div>
+
+  <!-- 제4조 -->
+  <div class="card">
+    <h2><span class="num">4</span>제4조 (이용자의 의무 및 서비스 이용수칙)</h2>
+    <p>
+      이용자는 앱의 건전한 서비스 환경 조성을 위해 다음 각 호의 <b>이용수칙</b>을
+      준수해야 합니다.
+    </p>
+    <ul class="rules">
+      <li>
+        <strong>정확한 정보 입력</strong>
+        회원가입 및 프로필 설정 시 타인의 정보나 허위 사실을 기재해서는 안 됩니다.
+      </li>
+      <li>
+        <strong>비정상적 이용 금지</strong>
+        회사가 제공하는 서비스의 취지에 어긋나는 방식으로 앱을 이용하거나,
+        시스템 소프트웨어를 역설계(Reverse Engineering), 해킹, 복제하는 행위를 금지합니다.
+      </li>
+      <li>
+        <strong>타인 권리 침해 금지</strong>
+        가계부, 기분 기록, 닉네임 설정 등 앱 내 텍스트 입력 기능을 사용할 때 타인의
+        명예를 훼손하거나 저작권을 침해하는 내용을 작성해서는 안 됩니다.
+      </li>
+      <li>
+        <strong>양도 금지</strong>
+        이용자는 서비스 이용 권한, 기타 이용 계약상 지위를 타인에게 양도, 증여 또는
+        담보로 제공할 수 없습니다.
+      </li>
+    </ul>
+  </div>
+
+  <!-- 제5조 -->
+  <div class="card">
+    <h2><span class="num">5</span>제5조 (서비스 제공의 중단 및 책임한계)</h2>
+    <p>
+      회사는 이용자가 서비스를 이용하는 과정에서 발생할 수 있는 데이터 손실 및 서비스
+      중단과 관련하여 다음 각 호에 대해 <b>책임을 지지 않습니다(면책)</b>.
+    </p>
+    <ul class="rules">
+      <li>
+        <strong>베타 기능의 한계</strong>
+        '클라우드 백업/복원' 기능은 베타 테스트 버전이므로 예기치 못한 오류, 동기화
+        실패, 데이터 유실이 발생할 수 있습니다. 이용자는 중요한 데이터를 별도로
+        관리해야 하며, <b>회사는 베타 기능 이용 중 발생한 데이터 유실에 대해 어떠한
+        보상이나 법적 책임을 지지 않습니다</b>.
+      </li>
+      <li>
+        <strong>외부 인프라 장애</strong>
+        본 서비스는 구글 파이어베이스(Google Firebase) 시스템을 기반으로 운영됩니다.
+        구글의 서버 장애, 디바이스 환경 변화, 통신망 장애 등
+        <b>회사가 통제할 수 없는 외부 요인으로 인해 서비스가 지연되거나 중단될 경우
+        회사는 책임을 면제받습니다</b>.
+      </li>
+      <li>
+        <strong>기기 및 관리 부주의</strong>
+        이용자의 스마트폰 분실, OS 업데이트 오류, 앱 삭제, 계정 관리 부주의로 인해
+        데이터가 삭제되거나 타인에게 노출된 경우 회사는 이에 책임을 지지 않습니다.
+      </li>
+      <li>
+        <strong>천재지변</strong>
+        천재지변, 전쟁, 국가 비상사태, 해결이 불가능한 기술적 결함 등 불가항력으로
+        인해 서비스를 제공할 수 없는 경우 서비스 제공 책임이 면제됩니다.
+      </li>
+    </ul>
+  </div>
+
+  <!-- 제6조 -->
+  <div class="card">
+    <h2><span class="num">6</span>제6조 (계약 해지 및 이용 제한)</h2>
+    <ol>
+      <li>
+        이용자는 언제든지 앱 내 회원 탈퇴 기능을 통해 이용계약을 해지할 수 있습니다.
+        탈퇴 시 파이어베이스 서버에 저장된 이용자의 데이터는 즉시 또는 일정 기간 후
+        안전하게 파기됩니다.
+      </li>
+      <li>
+        이용자가 본 약관의 <b>제4조(이용수칙)</b>를 위반할 경우, 회사는 사전 통지 없이
+        서비스 이용을 제한하거나 계정을 정지할 수 있습니다.
+      </li>
+    </ol>
+  </div>
+
+  <!-- 제7조 -->
+  <div class="card">
+    <h2><span class="num">7</span>제7조 (준거법 및 관할법원)</h2>
+    <p>
+      본 약관의 해석 및 회사와 이용자 간의 분쟁에 대해서는 대한민국 법률을 준거법으로
+      하며, 발생한 분쟁에 대한 소송은 민사소송법에 따른 관할법원에 제기합니다.
+    </p>
+  </div>
+
+  <!-- 공고·시행일 -->
+  <div class="meta-card">
+    <span><strong>공고일자:</strong> 2026년 5월 17일</span>
+    <span><strong>시행일자:</strong> 2026년 5월 17일</span>
+  </div>
+
+  <footer>
+    © 2026 TeraBlack · 나의 할 일(Beta)
+  </footer>
+
+</div>
+</body>
+</html>
