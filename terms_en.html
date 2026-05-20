@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service – My To-Do</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #6C5CE7;
+      --text:    #1a1a2e;
+      --muted:   #555;
+      --bg:      #f8f8fc;
+      --card:    #ffffff;
+      --border:  #e2e2f0;
+      --accent:  #6C5CE7;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans',
+                   sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      padding: 0 16px 60px;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 36px 24px 28px;
+      margin: 0 -16px 32px;
+      text-align: center;
+    }
+    header .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      background: rgba(255,255,255,.2);
+      border-radius: 20px;
+      padding: 3px 12px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    header h1 {
+      font-size: clamp(1.4rem, 5vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+    header p {
+      margin-top: 8px;
+      font-size: 13px;
+      opacity: .85;
+    }
+
+    /* ── Container ── */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* ── Section cards ── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 28px 24px;
+      margin-bottom: 20px;
+    }
+
+    /* ── Article heading ── */
+    .card h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+    }
+    .card h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    /* ── Body text ── */
+    p { font-size: 14.5px; color: var(--muted); margin-bottom: 10px; }
+    p:last-child { margin-bottom: 0; }
+
+    ol { padding-left: 20px; }
+    ol li {
+      font-size: 14.5px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    ol li:last-child { margin-bottom: 0; }
+
+    /* ── Rules list ── */
+    .rules { list-style: none; margin-top: 12px; }
+    .rules li {
+      position: relative;
+      padding: 12px 14px 12px 18px;
+      margin-bottom: 8px;
+      background: var(--bg);
+      border-left: 3px solid var(--primary);
+      border-radius: 0 10px 10px 0;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .rules li:last-child { margin-bottom: 0; }
+    .rules li strong {
+      color: var(--text);
+      display: block;
+      margin-bottom: 3px;
+      font-weight: 700;
+    }
+
+    /* ── Notice / warning block ── */
+    .notice {
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 13.5px;
+      color: #7a5c00;
+      margin-top: 14px;
+    }
+    .notice strong { color: #5c4200; }
+
+    /* ── Jurisdiction highlight box ── */
+    .jurisdiction-box {
+      background: #f0f4ff;
+      border: 1px solid #c5d0ff;
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 13.5px;
+      color: #2d2d6b;
+      margin-top: 14px;
+    }
+    .jurisdiction-box strong { color: #1a1a4e; }
+
+    /* ── Bold / emphasis ── */
+    b { font-weight: 700; color: var(--text); font-style: normal; }
+
+    /* ── Meta card ── */
+    .meta-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 28px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 32px;
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+    .meta-card span strong { color: var(--text); }
+
+    .lang-note {
+      font-size: 12px;
+      color: #999;
+      margin-top: 4px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12.5px;
+      color: #aaa;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 480px) {
+      .card { padding: 20px 18px 18px; }
+      header { padding: 28px 16px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="badge">Terms of Service</div>
+  <h1>My To-Do — Terms of Service</h1>
+  <p>TeraBlack · Mobile Application "My To-Do"</p>
+</header>
+
+<div class="container">
+
+  <!-- Article 1 -->
+  <div class="card">
+    <h2><span class="num">1</span>Article 1 — Purpose</h2>
+    <p>
+      These Terms of Service (hereinafter "Terms") govern the rights, obligations, responsibilities,
+      and rules of use between TeraBlack (hereinafter "Company" or "we") and users (hereinafter "User"
+      or "you") of the mobile application <b>My To-Do</b> (hereinafter "App" or "Service") provided
+      by the Company. By accessing or using the Service, you agree to be bound by these Terms.
+      If you do not agree to these Terms, please do not use the Service.
+    </p>
+  </div>
+
+  <!-- Article 2 -->
+  <div class="card">
+    <h2><span class="num">2</span>Article 2 — Account Registration &amp; Formation of Agreement</h2>
+    <ol>
+      <li>
+        A service agreement is formed when a User consents to these Terms, submits a registration
+        request using the Company's designated sign-up process (e.g., Google Sign-In), and the
+        Company approves that request.
+      </li>
+      <li>
+        To provide the Service, the Company may collect the following information from Users:
+        <b>Google account email address, nickname, phone number, and date of birth (age)</b>.
+        All such information is handled in accordance with our
+        <a href="index_en.html">Privacy Policy</a>.
+      </li>
+      <li>
+        Users who are under 14 years of age may register and use the Service only with the documented
+        consent of a parent or legal guardian, as required during the onboarding process.
+        The Company reserves the right to restrict or terminate accounts where parental consent
+        cannot be verified.
+      </li>
+      <li>
+        The Company may decline a registration request if: (a) the User has previously had their
+        account suspended or terminated for a violation of these Terms; (b) the User provides
+        false, inaccurate, or another person's information; or (c) the registration otherwise
+        violates applicable law or these Terms.
+      </li>
+    </ol>
+  </div>
+
+  <!-- Article 3 -->
+  <div class="card">
+    <h2><span class="num">3</span>Article 3 — Service Description &amp; Changes</h2>
+    <ol>
+      <li>
+        The App offers the following features: to-do list management, calendar view, statistics
+        (graph) view, one-line mood journal, budget tracker (ledger), timer, world clock, and
+        related tools.
+      </li>
+      <li>
+        The Company may, at its discretion and without prior notice, update, modify, add, or
+        remove features, content, or design elements of the App in order to improve the Service.
+        Where a change materially affects your use of the Service, we will endeavour to provide
+        reasonable advance notice via in-app notification.
+      </li>
+      <li>
+        <b>The cloud backup and restore feature is currently provided as a Beta service.</b>
+        The Company may modify, suspend, or discontinue this feature at any time, with or without
+        notice, for the purpose of improvement, stabilisation, or technical necessity.
+      </li>
+    </ol>
+  </div>
+
+  <!-- Article 4 -->
+  <div class="card">
+    <h2><span class="num">4</span>Article 4 — User Obligations &amp; Acceptable Use</h2>
+    <p>
+      In order to maintain a healthy and safe service environment, Users must comply with the
+      following <b>Acceptable Use Rules</b> at all times:
+    </p>
+    <ul class="rules">
+      <li>
+        <strong>Accurate Information</strong>
+        You must not provide false, misleading, or another person's information when registering
+        or setting up your profile.
+      </li>
+      <li>
+        <strong>No Unauthorised Access or Abuse</strong>
+        You must not use the Service in ways contrary to its intended purpose, and must not
+        reverse engineer, hack, decompile, disassemble, reproduce, or otherwise tamper with
+        the App's software, systems, or infrastructure.
+      </li>
+      <li>
+        <strong>Respect for Third-Party Rights</strong>
+        When using text-input features (e.g., budget notes, mood entries, nicknames), you must
+        not post content that defames, harasses, or infringes the intellectual property rights
+        of any third party.
+      </li>
+      <li>
+        <strong>No Transfer of Account</strong>
+        You may not sell, transfer, assign, gift, or pledge your account or any rights under
+        these Terms to any other person or entity.
+      </li>
+      <li>
+        <strong>Compliance with Laws</strong>
+        You must comply with all applicable local, national, and international laws and regulations
+        in connection with your use of the Service.
+      </li>
+    </ul>
+    <div class="notice">
+      <strong>Note:</strong> Violation of these Acceptable Use Rules may result in immediate suspension
+      or permanent termination of your account, at the Company's sole discretion, without prior notice
+      or liability.
+    </div>
+  </div>
+
+  <!-- Article 5 -->
+  <div class="card">
+    <h2><span class="num">5</span>Article 5 — Disclaimers &amp; Limitation of Liability</h2>
+    <p>
+      To the maximum extent permitted by applicable law, the Company shall <b>not be liable</b>
+      for any loss, damage, or expense arising from the following circumstances:
+    </p>
+    <ul class="rules">
+      <li>
+        <strong>Beta Feature Limitations</strong>
+        The cloud backup/restore feature is provided on an "as-is" basis during its Beta phase.
+        Unexpected errors, synchronisation failures, or data loss may occur. Users are solely
+        responsible for maintaining independent backups of important data.
+        <b>The Company accepts no liability for any data loss or corruption arising from the use
+        of Beta features.</b>
+      </li>
+      <li>
+        <strong>Third-Party Infrastructure Failures</strong>
+        The Service relies on Google Firebase infrastructure. Service delays or interruptions
+        caused by Google server outages, device environment changes, network failures, or other
+        factors <b>beyond the Company's reasonable control</b> shall not give rise to any claim
+        against the Company.
+      </li>
+      <li>
+        <strong>User Device &amp; Account Negligence</strong>
+        The Company is not liable for data loss or unauthorised access resulting from the User's
+        lost or stolen device, OS-level errors, accidental app deletion, or failure to safeguard
+        account credentials.
+      </li>
+      <li>
+        <strong>Force Majeure</strong>
+        The Company is not liable for any inability to provide the Service due to natural disasters,
+        war, national emergencies, pandemics, government action, or other circumstances beyond
+        the Company's control.
+      </li>
+    </ul>
+    <p style="margin-top: 14px;">
+      <b>Cap on Liability.</b> In any event, the Company's aggregate liability to you for any
+      claim arising out of or related to the Service shall not exceed the greater of (a) the
+      total amount you paid to the Company in the 12 months preceding the claim, or (b)
+      USD $10 (or the equivalent in your local currency). Some jurisdictions do not allow
+      the exclusion or limitation of liability, so the above limitations may not apply to you.
+    </p>
+  </div>
+
+  <!-- Article 6 -->
+  <div class="card">
+    <h2><span class="num">6</span>Article 6 — Termination &amp; Suspension</h2>
+    <ol>
+      <li>
+        You may terminate your account and end this agreement at any time by using the
+        in-app account deletion feature. Upon deletion, your data stored on Firebase servers
+        will be permanently deleted immediately and cannot be recovered.
+      </li>
+      <li>
+        The Company may suspend or permanently terminate your access to the Service, without
+        prior notice or liability, if you violate <b>Article 4 (Acceptable Use)</b> or any other
+        provision of these Terms, or if required to do so by applicable law.
+      </li>
+      <li>
+        The Company may terminate the Service entirely with <b>30 days' advance notice</b>
+        provided via in-app notification, except where such notice is not reasonably possible
+        due to circumstances outside the Company's control.
+      </li>
+    </ol>
+  </div>
+
+  <!-- Article 7 -->
+  <div class="card">
+    <h2><span class="num">7</span>Article 7 — Intellectual Property</h2>
+    <ol>
+      <li>
+        All rights, title, and interest in and to the App — including its software, design,
+        graphics, text, and underlying technology — are and remain the exclusive property of
+        TeraBlack. These Terms do not grant you any ownership rights in the App.
+      </li>
+      <li>
+        You retain ownership of any content you create and store within the Service (e.g., task
+        entries, mood notes, budget records). By submitting such content to the Service, you
+        grant the Company a limited, non-exclusive, royalty-free licence to store, display, and
+        process it solely for the purpose of providing the Service to you.
+      </li>
+    </ol>
+  </div>
+
+  <!-- Article 8 -->
+  <div class="card">
+    <h2><span class="num">8</span>Article 8 — Amendments to These Terms</h2>
+    <ol>
+      <li>
+        The Company may amend these Terms at any time. When material changes are made, we will
+        notify you via an in-app notice at least <b>7 days</b> before the changes take effect
+        (or 30 days for changes that materially affect your legal rights).
+      </li>
+      <li>
+        Your continued use of the Service after the effective date of the amended Terms constitutes
+        your acceptance of the changes. If you do not agree to the amended Terms, you must stop
+        using the Service and delete your account before the effective date.
+      </li>
+    </ol>
+  </div>
+
+  <!-- Article 9 — Governing Law & Jurisdiction (CRITICAL) -->
+  <div class="card">
+    <h2><span class="num">9</span>Article 9 — Governing Law &amp; Dispute Resolution</h2>
+    <ol>
+      <li>
+        These Terms are governed by and construed in accordance with the laws of the
+        <b>Republic of Korea</b>, without regard to its conflict-of-law provisions.
+      </li>
+      <li>
+        Any dispute, controversy, or claim arising out of or relating to these Terms or the
+        breach, termination, or invalidity thereof shall be subject to the exclusive jurisdiction
+        of the <b>Seoul Central District Court (서울중앙지방법원), Republic of Korea</b>, as the
+        court of first instance, unless otherwise required by applicable mandatory law.
+      </li>
+      <li>
+        Before initiating formal legal proceedings, both parties agree to attempt to resolve
+        any dispute in good faith through direct negotiation for a period of at least
+        <b>30 days</b> from the date one party notifies the other of the dispute in writing.
+      </li>
+    </ol>
+    <div class="jurisdiction-box">
+      <strong>Note for International Users.</strong> We operate this Service from the Republic of Korea.
+      By using the Service, you acknowledge that your use of the Service and any dispute arising
+      therefrom will be governed by Korean law and resolved in Korean courts, as set out above.
+      Certain mandatory consumer-protection laws of your country of residence may still apply to you
+      and cannot be excluded by these Terms.
+    </div>
+    <div class="notice" style="margin-top: 12px;">
+      <strong>Note for California Residents.</strong> Nothing in this Article waives any rights you
+      may have under California law, including the right to seek relief in small claims court for
+      disputes within the applicable monetary threshold.
+    </div>
+  </div>
+
+  <!-- Article 10 -->
+  <div class="card">
+    <h2><span class="num">10</span>Article 10 — Miscellaneous</h2>
+    <ol>
+      <li>
+        <b>Entire Agreement.</b> These Terms, together with our Privacy Policy, constitute the
+        entire agreement between you and the Company with respect to the Service and supersede
+        all prior agreements and understandings.
+      </li>
+      <li>
+        <b>Severability.</b> If any provision of these Terms is found to be unenforceable or
+        invalid, that provision will be limited or eliminated to the minimum extent necessary,
+        and the remaining provisions will continue in full force and effect.
+      </li>
+      <li>
+        <b>Waiver.</b> Failure by the Company to enforce any right or provision of these Terms
+        shall not constitute a waiver of such right or provision.
+      </li>
+      <li>
+        <b>Language.</b> These Terms are originally written in Korean. In the event of any
+        conflict between the Korean version and any translated version, the Korean version shall
+        prevail to the fullest extent permitted by applicable law.
+      </li>
+      <li>
+        <b>Contact.</b> For questions about these Terms, please contact:
+        TeraBlack · <b>herjy6372@gmail.com</b>
+      </li>
+    </ol>
+  </div>
+
+  <!-- Meta -->
+  <div class="meta-card">
+    <span><strong>Announced:</strong> May 17, 2026</span>
+    <span><strong>Effective Date:</strong> May 17, 2026</span>
+    <div class="lang-note" style="width:100%;">
+      Originally established in Korean (한국어). The Korean version takes precedence in the event of any inconsistency.
+    </div>
+  </div>
+
+  <footer>
+    © 2026 TeraBlack · My To-Do (Beta)
+  </footer>
+
+</div>
+</body>
+</html>
